@@ -16,13 +16,9 @@ export default function LoginPage() {
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col justify-between antialiased text-slate-800">
       
       {/* Header Logo */}
-      <header className="py-8 flex justify-center items-center">
+      <header className="pt-0 pb-2 flex justify-center items-center -mt-10">
         <div className="flex items-center gap-1.5 cursor-pointer" onClick={() => window.location.href = "/"}>
-          <svg className="w-6 h-7 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-            <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-            <path d="M12 24 L17 30 L28 18" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <span className="text-xl font-black text-[#af0707] tracking-tight">McAfee</span>
+          <img src="/logo.png" alt="McAfee Logo" className="h-40 max-h-none w-auto object-contain py-0" />
         </div>
       </header>
 

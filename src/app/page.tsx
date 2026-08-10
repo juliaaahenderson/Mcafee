@@ -59,6 +59,7 @@ export default function McAfeeClone() {
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(0);
   const [seeAllFeatures, setSeeAllFeatures] = useState(false);
   const [showAllFaqs, setShowAllFaqs] = useState(false);
+  const [openTermsSection, setOpenTermsSection] = useState<string | null>(null);
 
   const selectedHeroPlan = plan2YearDetails[heroPlan] || plan2YearDetails["McAfee® Total Protection - Basic - 2 yr"];
 
@@ -190,13 +191,8 @@ export default function McAfeeClone() {
         <div className="max-w-none mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer">
-            <svg className="w-8 h-8 text-[#af0707] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            <span className="font-sans font-extrabold text-xl tracking-tight text-[#af0707]">
-              McAfee<span className="text-[10px] font-bold text-slate-400 align-super">TM</span>
-            </span>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.href = "/"}>
+            <img src="/logo.png" alt="McAfee Logo" className="h-40 max-h-none w-auto object-contain py-0" />
           </div>
 
           {/* Desktop Right CTAs */}
@@ -325,12 +321,8 @@ export default function McAfeeClone() {
                     </div>
                     {/* Card body – pink tint */}
                     <div className="px-3 pt-3 pb-4 space-y-1.5" style={{ background: "#fce8e8" }}>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-3 h-3 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-                          <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-                          <path d="M13 20 L18 26 L28 16" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <span className="text-[8.5px] font-extrabold text-[#af0707] tracking-tight">McAfee™</span>
+                      <div className="flex items-center gap-1 py-1">
+                        <img src="/logo.png" alt="McAfee Logo" className="h-10 w-auto object-contain" />
                       </div>
                       <div className="text-[11px] font-extrabold text-[#454545]">Essential</div>
                       <ul className="space-y-1">
@@ -372,12 +364,8 @@ export default function McAfeeClone() {
                   {/* Card content – compact */}
                   <div className="px-6 pt-4 pb-5 space-y-3">
                     {/* McAfee™ M-shield logo row */}
-                    <div className="flex items-center gap-2">
-                      <svg className="w-5 h-6 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-                        <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-                        <path d="M13 21 L18 27 L28 17" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                      <span className="text-sm font-extrabold text-[#af0707] tracking-tight">McAfee™</span>
+                    <div className="flex items-center gap-2 py-1">
+                      <img src="/logo.png" alt="McAfee Logo" className="h-16 w-auto object-contain" />
                     </div>
                     {/* Plan title */}
                     <h3 className="text-[28px] font-extrabold text-[#454545] leading-none">Basic</h3>
@@ -425,12 +413,8 @@ export default function McAfeeClone() {
                     </div>
                     {/* Card body – lavender tint, same text style as 1st card */}
                     <div className="px-3 pt-3 pb-4 space-y-1.5" style={{ background: "#ece8f5" }}>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-3 h-3 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-                          <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-                          <path d="M13 20 L18 26 L28 16" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <span className="text-[8.5px] font-extrabold text-[#af0707] tracking-tight">McAfee™</span>
+                      <div className="flex items-center gap-1 py-1">
+                        <img src="/logo.png" alt="McAfee Logo" className="h-10 w-auto object-contain" />
                       </div>
                       <div className="text-[11px] font-extrabold text-[#454545]">Complete</div>
                       <ul className="space-y-1">
@@ -581,11 +565,7 @@ export default function McAfeeClone() {
 
                     {/* Plan name with McAfee logo */}
                     <div className="flex items-center justify-center gap-1 mt-4 mb-6">
-                      <svg className="w-3.5 h-4 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-                        <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-                        <path d="M12 24 L17 30 L28 18" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                      <span className="text-[11px] font-black text-[#af0707] tracking-tight">McAfee</span>
+                      <img src="/logo.png" alt="McAfee Logo" className="h-12 w-auto object-contain mr-1" />
                       <span className="text-[11px] text-slate-400 font-light">|</span>
                       <span className="text-[11px] font-bold text-[#454545]">{plan.name.replace("McAfee® ", "")}</span>
                     </div>
@@ -739,27 +719,88 @@ export default function McAfeeClone() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-[#f3f4f6] rounded-3xl p-8 text-slate-700 text-sm leading-relaxed">
             
-            <p className="font-bold mb-6 text-slate-800">* Important Terms and Offer Details:</p>
+            <p className="font-bold mb-6 text-slate-800">Important Terms and Promotional Offer Details:</p>
             
             <div className="space-y-4 mb-6">
-              <div className="flex items-start gap-2 cursor-pointer hover:text-slate-900 transition">
-                <span className="font-bold text-slate-600 text-sm leading-none mt-px">+</span>
-                <span className="font-semibold text-slate-700">Subscription, Pricing and Automatic Renewal Terms:</span>
+              {/* Section 1 */}
+              <div>
+                <div 
+                  onClick={() => setOpenTermsSection(openTermsSection === "subscription" ? null : "subscription")}
+                  className="flex items-center gap-2 cursor-pointer hover:text-slate-900 transition"
+                >
+                  <span className="font-bold text-slate-600 text-lg leading-none select-none">
+                    {openTermsSection === "subscription" ? "—" : "+"}
+                  </span>
+                  <span className="font-semibold text-[#454545]">Subscription, Pricing, and Automatic Renewal Terms:</span>
+                </div>
+                {openTermsSection === "subscription" && (
+                  <ul className="list-disc list-outside pl-6 mt-3 space-y-4 text-xs text-slate-600 max-w-5xl">
+                    <li>The amount you are charged upon purchase is the price of the first term of your subscription. After that, unless you choose to cancel your subscription, it will renew automatically for another term and you will be charged the renewal subscription price in effect at the time of your renewal.</li>
+                    <li>We will contact you using the email address you provide when you register ahead of the renewal date, so you can decide whether to keep your subscription going or not.</li>
+                    <li>Introductory offer: Unless otherwise stated, if an introductory price is shown, it describes the lower price offered to you, as a new customer, for the first term of the subscription and the price currently paid by existing customers upon renewal of their subscription for a subsequent year at the time that the offer is made.</li>
+                    <li>Pricing is subject to change. The new price will apply when your subscription renews. If the renewal price changes, we will notify you in advance using the email address you provided at registration, so you always know what's going on.</li>
+                    <li>Payment will be taken 30 days before your subscription renews. You can change your auto-renewal settings before then to avoid being charged from your <a href="#" className="text-blue-600 hover:underline">My Account</a> page. To learn more, <a href="#" className="text-blue-600 hover:underline">click here</a>.</li>
+                    <li>You may request a full refund by contacting <a href="#" className="text-blue-600 hover:underline">Customer Support</a> or accessing your <a href="#" className="text-blue-600 hover:underline">My Account</a> page within 30 days of initial purchase or within 60 days of automatic renewal. You may also be entitled to a pro-rated refund outside this window. See the <a href="#" className="text-blue-600 hover:underline">Refund Policy</a> for details.</li>
+                    <li>Your subscription is subject to our <a href="#" className="text-blue-600 hover:underline">License Agreement</a> and <a href="#" className="text-blue-600 hover:underline">Privacy Notice</a>. Subscriptions covering &quot;all&quot; devices are limited to supported devices that you own. Product features may be added, changed or removed during the subscription term. Not all features may be available on all devices. See <a href="#" className="text-blue-600 hover:underline">System Requirements</a> for additional information.</li>
+                  </ul>
+                )}
               </div>
               
-              <div className="flex items-start gap-2 cursor-pointer hover:text-slate-900 transition">
-                <span className="font-bold text-slate-600 text-sm leading-none mt-px">+</span>
-                <span className="font-semibold text-slate-700">**Free Benefits With Auto-Renewal:</span>
+              {/* Section 2 */}
+              <div>
+                <div 
+                  onClick={() => setOpenTermsSection(openTermsSection === "benefits" ? null : "benefits")}
+                  className="flex items-center gap-2 cursor-pointer hover:text-slate-900 transition"
+                >
+                  <span className="font-bold text-slate-600 text-lg leading-none select-none">
+                    {openTermsSection === "benefits" ? "—" : "+"}
+                  </span>
+                  <span className="font-semibold text-[#454545]">**Free Benefits With Auto-Renewal:</span>
+                </div>
+                {openTermsSection === "benefits" && (
+                  <ul className="list-disc list-outside pl-6 mt-3 space-y-4 text-xs text-slate-600 max-w-5xl">
+                    <li>For many qualifying product subscriptions McAfee offers additional benefits for free when you are enrolled in auto-renewal. You can check your eligibility for these benefits in your <a href="#" className="text-blue-600 hover:underline">My Account</a> page. Not all benefits are offered in all locations or for all product subscriptions. <a href="#" className="text-blue-600 hover:underline">System Requirements</a> apply. Turning off auto-renewal terminates your eligibility for these additional benefits.</li>
+                    <li><strong>Virus Protection Pledge (VPP):</strong> If we cannot remove a virus from your supported device we'll refund you the amount you paid for your current term subscription. The refund does not apply to any damage or loss caused by a virus. You are responsible for backing up your data to prevent data loss. See terms here: <a href="https://mcafee.com/pledge" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">mcafee.com/pledge</a>.</li>
+                  </ul>
+                )}
               </div>
               
-              <div className="flex items-start gap-2 cursor-pointer hover:text-slate-900 transition">
-                <span className="font-bold text-slate-600 text-sm leading-none mt-px">+</span>
-                <span className="font-semibold text-slate-700">Additional Terms Specific to Identity Monitoring Service:</span>
+              {/* Section 3 */}
+              <div>
+                <div 
+                  onClick={() => setOpenTermsSection(openTermsSection === "identity" ? null : "identity")}
+                  className="flex items-center gap-2 cursor-pointer hover:text-slate-900 transition"
+                >
+                  <span className="font-bold text-slate-600 text-lg leading-none select-none">
+                    {openTermsSection === "identity" ? "—" : "+"}
+                  </span>
+                  <span className="font-semibold text-[#454545]">**Additional Terms Specific to Identity Monitoring Service:</span>
+                </div>
+                {openTermsSection === "identity" && (
+                  <ul className="list-disc list-outside pl-6 mt-3 space-y-4 text-xs text-slate-600 max-w-5xl">
+                    <li>Eligibility: McAfee® Identity Monitoring Service Essentials is available within active McAfee Total Protection and McAfee LiveSafe subscriptions with identity monitoring for up to 10 unique emails. Phone number monitoring is enabled upon activation of Automatic Renewal. Not all identity monitoring elements are available in all countries. See <a href="#" className="text-blue-600 hover:underline">Product Terms of Service</a> for more information.</li>
+                    <li>Your subscription is subject to our License Agreement and Privacy Notice. Product features may be added, changed or removed during the subscription term. Some features may require registration and a valid ID number to activate. See <a href="#" className="text-blue-600 hover:underline">System Requirements</a> for additional information.</li>
+                    <li>While McAfee Identity Monitoring Service provides you tools and resources to protect yourself from identity theft, no identity can be completely secure.</li>
+                  </ul>
+                )}
               </div>
               
-              <div className="flex items-start gap-2 cursor-pointer hover:text-slate-900 transition">
-                <span className="font-bold text-slate-600 text-sm leading-none mt-px">+</span>
-                <span className="font-semibold text-slate-700">Additional Terms Specific to Scam Detector:</span>
+              {/* Section 4 */}
+              <div>
+                <div 
+                  onClick={() => setOpenTermsSection(openTermsSection === "scam" ? null : "scam")}
+                  className="flex items-center gap-2 cursor-pointer hover:text-slate-900 transition"
+                >
+                  <span className="font-bold text-slate-600 text-lg leading-none select-none">
+                    {openTermsSection === "scam" ? "—" : "+"}
+                  </span>
+                  <span className="font-semibold text-[#454545]">Additional Terms Specific to Scam Detector:</span>
+                </div>
+                {openTermsSection === "scam" && (
+                  <ul className="list-disc list-outside pl-6 mt-3 space-y-4 text-xs text-slate-600 max-w-5xl">
+                    <li>Video Scams is currently trained only on English audio. Scanning non-English audio in videos might give less accurate results. No AI is perfect, but we're committed to improving its reliability for your protection. See <a href="#" className="text-blue-600 hover:underline">here</a> for more information.</li>
+                  </ul>
+                )}
               </div>
             </div>
 

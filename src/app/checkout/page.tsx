@@ -247,14 +247,10 @@ export default function CheckoutPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans antialiased text-[#333]">
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 py-4 relative z-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          <div className="flex items-center gap-1.5 cursor-pointer" onClick={() => window.location.href = "/"}>
-            <svg className="w-8 h-9 shrink-0" viewBox="0 0 40 48" fill="#af0707">
-              <path d="M20 0 L0 8 L0 26 C0 37 9 45 20 48 C31 45 40 37 40 26 L40 8 Z" />
-              <path d="M12 24 L17 30 L28 18" stroke="white" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span className="text-2xl font-black text-[#af0707] tracking-tight">McAfee</span>
+      <header className="bg-white border-b border-slate-200 h-20 relative z-50 flex items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center w-full">
+          <div className="flex items-center cursor-pointer relative h-10 w-48" onClick={() => window.location.href = "/"}>
+            <img src="/logo.png" alt="McAfee Logo" className="h-40 max-h-none w-auto object-contain absolute left-0 top-1/2 -translate-y-1/2" />
           </div>
 
         {/* Header Right Actions */}
